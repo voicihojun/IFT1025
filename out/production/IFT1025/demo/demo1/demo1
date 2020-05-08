@@ -1,0 +1,28 @@
+
+Démonstration 01
+# Démonstration 01, Java
+
+0. S'assurer que tout le monde peut se connecter à StudiUM et aux
+ordinateurs du lab
+
+Consulter au besoin :
+https://support.iro.umontreal.ca/doku.php?id=compte:motdepasse
+
+
+1. Remplir le document 01-expressions.pdf disponible sur StudiUM
+
+2. Montrer comment installer les outils en ligne de commande Java et
+s'assurer que tout le monde arrive à compiler un Hello World avec :
+
+javac Hello.java
+java Hello
+
+Télécharger les binaires ici au besoin :
+http://www.oracle.com/technetwork/java/javase/downloads/index.html
+
+
+3. Montrer comment installer Eclipse et créer un projet Java
+
+
+4. Travailler sur l'exercice noté de cette semaine
+

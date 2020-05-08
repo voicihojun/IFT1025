@@ -1,0 +1,76 @@
+Exercice noté #2
+
+a) Écrire une fonction trier() qui trie en ordre croissant le tableau
+   passé en paramètre.
+   Assurez-vous de retourner un nouveau tableau trié et de ne pas
+   modifier celui passé en paramètre
+
+   public static int[] trier(int[] tab)
+
+b) Écrire la fonction principale de votre programme :
+
+   public static void main(String[] args)
+
+Qui devrait permettre d'entrer des nombres sur la ligne de commande
+pour les trier.
+
+
+Voici un exemple d'exécution du programme :
+
+```
+Entrez les nombres à trier (entrez 0 pour arrêter) :
+7
+11
+6
+33
+0
+Les nombres sont :
+7,11,6,33
+Les nombres triés sont :
+6,7,11,33
+```
+
+Où les nombres 7, 11, 6, 33 et 0 ont été entrés manuellement par
+l'utilisateur du programme.
+
+Pour stocker les nombres entrés :
+
+Vous pouvez assumer qu'il y aura un maximum de 100 nombres qui
+pourront être entrés sur la ligne de commande.
+(Le programme peut planter si l'utilisateur dépasse 100 nombres)
+
+
+
+Note : si l'utilisateur entre quelque chose d'invalide,
+le comportement du programme est indéfini (ça peut planter).
+
+Référez-vous au document Complément : Entrée et sortie d'information
+par/pour l'utilisateur (Pascal Vincent) pour plus d'informations
+
+Indications :
+- Remettez votre fichier sur StudiUM avant le 22 janvier, 23h55
+  Aucun retard ne sera accepté.
+
+- Nommez votre fichier "Exercice2.java" et déclarez la classe
+  principale de votre programme avec :
+
+public class Exercice2 {
+    // ...
+}
+
+- Assurez-vous que votre programme compile s'exécute correctement avec
+  les commandes :
+
+javac Exercice2.java
+java Exercice2
+
+- Assurez-vous de tester votre programme correctement. Il est
+  *fortement recommandé* (mais pas obligatoire) d'écrire une fonction
+  qui réalise tests unitaires. Si vous en codez une, ne l'appelez pas
+  dans votre `main` dans la version finale remise.
+
+- Assurez-vous de respecter la spécification et assurez-vous que votre
+  programme compile sans erreur si vous ne voulez pas vous retrouver
+  avec la note de 0.
+
+- Ce travail compte pour 2.5% de votre note finale

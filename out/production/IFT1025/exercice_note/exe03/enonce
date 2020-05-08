@@ -1,0 +1,153 @@
+Exercice noté #3
+Votre travail cette semaine est de concevoir deux classes
+mathématiques :
+
+- Vecteur
+- Matrice
+
+
+L'interface publique des deux objets est définie comme suit :
+
+Classe Vecteur
+==============
+
+    public Vecteur(double[] elements) : constructeur avec en paramètre un tableau d'éléments de type `double`
+
+    public void setElement(int index, double valeur) : permet de changer la valeur à l'index
+                                                       donné (commence à 0, comme pour un tableau)
+
+    public double getElement(int index) : accès à la valeur à l'élément donné
+
+    public double dotProduct(Vecteur v) : retourne le produit scalaire avec un autre vecteur
+
+    public void afficher() : affiche le contenu du vecteur entres accolades {  }
+
+Classe Matrice
+==============
+
+    public Matrice(int lignes, int cols) : constructeur pour une matrice de taille Nlignes x Ncolonnes (remplie de zéros)
+
+    public void additionnerScalaire(double n) : additionne un scalaire dans toutes les cellules
+                                                de la matrice (ça modifie donc la matrice)
+
+    public void multiplierScalaire(double n) : multiplie toutes les cellules par
+                                               un scalaire (ça modifie également la matrice)
+
+    public Matrice dotProduct(Matrice m) : fait le produit matriciel entre deux matrices (crée
+                                           une *nouvelle matrice* de la bonne taille, ne modifie
+                                           pas les deux matrices originales)
+
+    public double getCell(int ligne, int col) : accesseur pour la cellule à une ligne/colonne donnée
+    public void setCell(int ligne, int col, double valeur) : mutateur pour la cellule à une ligne/colonne donnée
+
+    public Vecteur getLine(int ligne) : retourne la Nième ligne sous forme d'un vecteur
+    public Vecteur getCol(int col) : retourne la Nième colone sous forme d'un vecteur
+
+    public void afficher() : affiche la matrice sur la console
+
+    public static Matrice identite(int n) : retourne une instance de la matrice identité N x N
+
+
+Certaines (mauvaises) utilisations de ces classes peuvent lancer des
+erreurs, on vous demande de les gérer de la façon suivante :
+
+    * dotProduct d'un Vecteur
+      => Si les dimensions des vecteurs multipliés ne sont pas
+         cohérentes, exécutez ce code :
+
+            System.err.println("Erreur dans les dimensions des vecteurs");
+            return 0.0/0.0; // Génère le double Not-a-Number (NaN)
+
+    * dotProduct d'une Matrice
+      => Si les dimensions des matrice multipliées ne sont pas
+         cohérentes, exécutez ce code :
+
+            System.err.println("Erreur dans les dimensions des matrices");
+            return null;
+
+    * getCell/setCell/... toutes les fonctions qui accèdent à des index
+      => Si l'index dépasse les bornes de la matrice ou du vecteur
+       > Ne gérez pas l'erreur, laissez le programme planter à l'exécution
+
+
+Vous êtes libres de définir les attributs qui vous semblent
+nécessaires
+
+Assurez-vous de respecter le principe d'encapsulation, c'est-à-dire
+que l'état d'une Matrice et d'un Vecteur ne devraient pas être
+modifiable sans passer par les méthodes de l'objet.
+
+
+Écrivez également une classe Exercice3 qui teste *toutes* les
+fonctionnalités de vos classes dans la fonction `main` :
+
+public class Exercice3 {
+
+    public static void main(String[] args) {
+
+        double[] elements = new double[]{1, 2, 3};
+        Vecteur v1 = new Vecteur(elements);
+        Vecteur v2 = new Vecteur(elements);
+        v2.setElement(0, 10);
+
+        System.out.println("--- Vecteurs ---");
+        v1.afficher();
+        v2.afficher();
+
+        System.out.println("--- Matrices ---");
+        Matrice m1 = Matrice.identite(2);
+        m1.multiplierScalaire(3);
+        m1.setCell(0, 1, 5);
+        m1.setCell(1, 0, -2);
+        System.out.println("Matrice 1 :");
+        m1.afficher();
+
+        Matrice m2 = new Matrice(2, 1);
+        m2.additionnerScalaire(10);
+        System.out.println("Matrice 2 :");
+        m2.afficher();
+
+        Matrice m3 = m1.dotProduct(m2);
+        System.out.println("Matrice 3 :");
+        m3.afficher();
+
+        // ...
+    }
+}
+
+Assurez-vous que ces tests donnés en exemple donnent *exactement*
+l'affichage suivant :
+
+--- Vecteurs ---
+{1.0, 2.0, 3.0}
+{10.0, 2.0, 3.0}
+--- Matrices ---
+Matrice 1 :
+[ 3.0 5.0 ]
+[ -2.0 3.0 ]
+Matrice 2 :
+[ 10.0 ]
+[ 10.0 ]
+Matrice 3 :
+[ 80.0 ]
+[ 10.0 ]
+
+
+Indications :
+- Remettez vos fichiers sur StudiUM avant le 29 janvier, 23h55
+
+- Assurez-vous de nommer vos fichiers Vecteur.java, Matrice.java et
+  Exercice3.java (ce dernier doit contenir uniquement vos tests dans
+  la fonction `main()`)
+
+- Assurez-vous que votre programme compile s'exécute correctement avec
+  les commandes :
+
+javac Exercice3.java
+java Exercice3
+
+- Assurez-vous de respecter la spécification et assurez-vous que votre
+  programme compile sans erreur si vous ne voulez pas vous retrouver
+  avec la note de 0.
+
+- Ce travail compte pour 2.5% de votre note finale

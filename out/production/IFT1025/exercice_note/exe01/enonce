@@ -1,0 +1,254 @@
+
+Exercice noté #1
+Énoncé :
+
+L'exercice de cette semaine est de programmer en Java les exercices
+notés 2, 3 et 4, respectivement, le calcul du taux d'intérêt,
+l'approximation de π par sommation à 20,000 termes et la conversion de
+nombres en chiffres romains.
+
+Vous devez coder les fonctions statiques suivantes :
+
+    /**
+     * Retourne le montant à payer par mois pour un prêt donné à un
+     * certain taux d'intérêt sur un nombre de mois nbrMois
+     */
+    public static float paiementParMois(float pret, float interet, int nbrMois)
+
+    /**
+     * Approxime PI en sommant les nbrIterations premiers termes de la
+     * série :
+     * pi = 4/1 - 4/3 + 4/5 - 4/7 ...
+     */
+    public static float approxPi(int nbrIterations)
+
+    /**
+     * Converti le nombre n en chiffres romains
+     */
+    public static String romain(int n)
+
+Comme dans l'exercice 4 de Programmation 1, vous devez également coder
+les fonctions `chiffre` et `repeter`, à vous de déterminer les
+signatures appropriées (voir les énoncés originaux et les
+solutionnaires en JavaScript plus bas).
+
+
+
+Indications :
+- Remettez votre fichier sur StudiUM avant le 13 janvier, 23h55
+- Nommez votre fichier "Exercice1.java" et déclarez la classe
+  principale de votre programme avec :
+
+public class Exercice1 {
+    // ...
+}
+
+- Assurez-vous que votre programme compile s'exécute correctement avec
+  les commandes :
+
+javac Exercice1.java
+java Exercice1
+
+- Ces exercices seront corrigés automatiquement. Assurez-vous de
+  respecter la spécification et assurez-vous que votre programme
+  compile si vous ne voulez pas vous retrouver avec la note de 0
+- Aucun travail remis en retard ne sera évalué
+- Ce travail compte pour 1% de votre note finale
+
+
+--------------------------------------------------
+
+
+Énoncés des exercices 2, 3 et 4 :
+
+Exercice #2 :
+
+Lorsqu'on obtient un prêt hypothécaire à paiements fixes, on s'engage
+à rembourser le prêt sur un certain nombre de mois en payant le même
+montant à chaque mois.  Si p est le montant du prêt, et que n est le
+nombre de mois, et que i est le taux d'intérêt annuel en pourcents,
+alors la formule mathématique suivante peut être utilisée pour
+calculer m, le montant à payer à chaque mois :
+
+                            n
+      p * (1 + i / (12*100))  *  i / (12*100)
+m  =  ---------------------------------------
+                                n
+              (1 + i / (12*100))  - 1
+
+Supposez qu'on cherche à calculer les paiements mensuels d'un prêt de
+200000$ sur 360 mois avec un taux d'intérêt annuel de 6.5%.  Dans
+codeBoot, codez un programme qui fait le calcul de m et qui l'imprime.
+Le programme doit contenir seulement des déclarations de variables et
+se terminer par l'appel de fonction :
+
+     print(m);
+
+Votre programme doit tirer profit de déclarations de variables pour
+éviter les calculs redondants et répétitifs et pour que ce soit facile
+de changer le taux d'intérêt, le nombre de mois et le montant du prêt.
+
+
+
+Solution :
+
+// Auteur: Marc Feeley (24 septembre 2017)
+
+var p = 200000; // montant du prêt
+var n = 360;    // nombre de mois
+var i = 6.5;    // taux d'intérêt annuel, en pourcents
+
+var im = i/(12*100);                // taux d'intérêt mensuel
+var expo = Math.pow(1+im,n);        // terme exponentiel
+var m = p * expo * im / (expo - 1); // paiement mensuel
+
+print(m); // imprimer le paiement mensuel
+
+--------------------------
+
+Exercice #3:
+
+Vous devez coder un programme qui calcule une approximation du
+nombre pi en faisant la somme d'une série de nombres. Mathématiquement
+le nombre pi est égal à la somme infinie suivante :
+
+pi = 4/1 - 4/3 + 4/5 - 4/7 + 4/9 - 4/11 + ...
+
+Remarquez l'alternance des signes d'un terme à l'autre de la série
+(positif, négatif, positif, ...) De plus, remarquez que les diviseurs
+sont les nombres impairs. L'approximation sera la somme des 20000
+premiers termes de cette série. Coder un programme qui fait la somme
+et affiche avec print la valeur obtenue. Votre programme doit être
+complet, avec des commentaires qui indiquent le nom du fichier,
+l'auteur (votre nom), une brève description de l'utilité du programme.
+Il doit aussi y avoir des commentaires qui expliquent à quoi
+correspondent chaque variable, et le fonctionnement du programme.
+Utilisez des énoncés de boucle appropriés, une indentation correcte,
+et des énoncés blocs dans le corps des ifs et boucles. Votre
+programme doit éviter les calculs redondants et répétitifs.
+
+
+Solution :
+
+// Auteur: Marc Feeley
+
+var n = 20000;  // nombre de termes à sommer
+var pi = 0;     // approximation de pi
+
+for (var i=0; i<n; i++) {
+    pi += Math.pow(-1,i) * 4/(i*2+1); // terme à ajouter
+}
+
+print(pi);
+
+--------------------------
+
+Exercice #4:
+
+Vous devez concevoir et coder une fonction nommée "romain" qui fait la
+conversion d'un nombre entier entre 1 et 3999 en un texte
+correspondant à la numération romaine de ce nombre.  Par exemple
+l'appel romain(439) doit retourner le texte "CDXXXIX" et romain(2948)
+doit retourner le texte "MMCMXLVIII".  Vous devez faire une
+décomposition en sous-fonctions pour que votre code soit facile à
+comprendre et qu'il évite la duplication de code similaire.  Vous devez
+avoir 3 fonctions au total dans votre code :
+
+- repeter
+- chiffre
+- romain
+
+La fonction repeter prend deux paramètres, un entier n et un texte
+t, et retourne un texte composé de n répétitions du texte t (par
+exemple, l'appel repeter(3,"I") doit retourner "III").
+
+La fonction chiffre s'occupe d'encoder en numérotation romaine un seul
+chiffre du nombre décimal.  Cette fonction traite 4 cas :
+
+  - chiffre de 0 à 3
+  - chiffre 4
+  - chiffre de 5 à 8
+  - chiffre 9
+
+Pour les cas qui couvrent plus d'un chiffre (0 à 3 et 5 à 8), utilisez
+la fonction repeter pour répeter un certain nombre de fois l'unité (I,
+X, C ou M dépendant de la position du chiffre du nombre décimal).  Par
+exemple, chiffre(439, 100, "C", "D", "M") doit retourner le texte "CD"
+car le chiffre des centaines, c'est-à-dire 4, est 5-1 et le chiffre
+romain pour 500 est "D" et le chiffre romain pour 100 est "C".
+
+Notez bien : la fonction chiffre doit être une fonction générique, ce
+qui veut dire qu'elle pourrait techniquement être utilisée avec
+d'autres symboles que ceux des chiffres romains. Un appel à
+chiffre(70, 10, "x", "y", "z") devrait donc retourner le texte "yxx".
+
+En plus de faire correctement la conversion demandée, votre code doit
+être correctement indenté, il doit contenir des commentaires
+explicatifs et des identificateurs significatifs.
+
+Voici un indice pour la conception de la fonction romain.  La
+numérotation romaine d'un nombre n se décompose en une partie qui
+représente (dans la numérotation arabe décimale) le chiffre des
+milliers, suivie d'une partie qui représente le chiffre des centaines,
+suivie d'une partie qui représente le chiffre des dizaines, et
+finalement une partie qui représente le chiffre des unités.
+
+Ainsi la conversion du nombre 439, qui a 0, 4, 3, et 9 comme chiffres
+arabes des milliers, centaines, dizaines et unités, aura 4 parties :
+"", "CD", "XXX", "IX" qui seront concaténées.  Chaque partie contient
+uniquement
+
+- les lettres I, V et X pour les unités (par exemple "VIII" pour 8)
+- les lettres X, L et C pour les dizaines (par exemple "XL" pour 4)
+- les lettres C, D et M pour les centaines (par exemple "CM" pour 9)
+- la lettre M pour les milliers (par exemple "MM" pour 2)
+
+Solution:
+
+// Auteur: Marc Feeley
+
+// Les fonctions contenues dans ce fichier font la conversion des
+// nombres entiers entre 1 et 3999 en numérotation romaine.
+
+var romain = function ( n ) {
+
+    // Retourne un texte correspondant à la numération romaine de n, qui
+    // doit être un nombre entier entre 1 et 3999
+
+    return chiffre(n, 1000, "M", "?", "?") +
+           chiffre(n,  100, "C", "D", "M") +
+           chiffre(n,   10, "X", "L", "C") +
+           chiffre(n,    1, "I", "V", "X");
+};
+
+var chiffre = function (n, puiss10, un, cinq, dix) {
+
+    // Retourne un texte correspondant au chiffre de n de poids puiss10.
+
+    var c = Math.floor(n/puiss10) % 10;
+
+    if (c < 4) {
+        return repeter(c, un);
+    } else if (c == 4) {
+        return un + cinq;
+    } else if (c < 9) {
+        return cinq + repeter(c-5, un);
+    } else {
+        return un + dix;
+    }
+};
+
+var repeter = function (n, sujet) {
+
+    // Retourne un texte qui contient n répétitions du texte sujet
+    // (par exemple repeter(3,"I") retourne "III").
+
+    var accum = "";
+
+    for (var i=n; i>0; i--) {
+        accum += sujet;
+    }
+
+    return accum;
+};
+
