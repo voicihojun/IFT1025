@@ -1,0 +1,105 @@
+Exercice noté #4 (partie 1)
+# Design Orienté Objet
+
+Votre travail de cette semaine sera un peu différent de ce que vous
+faites d'habitude : vous devrez réfléchir à une décomposition du code
+en objets pour le TP1.
+
+L'énoncé du TP1 est disponible sur StudiUM, vous avez également une
+version exécutable du jeu que vous pouvez tester.
+
+La première étape sera de remettre un document contenant un design qui
+vous semble bon.
+
+Listez les classes dont vous aurez besoin, quelle classe hérite de
+quoi, quels sont les attributs de chaque objet, quelles sont les
+méthodes de chaque objet, etc.
+
+
+Remettez un fichier texte `design.txt`, que vous pouvez éditer dans
+Emacs, Vim, Notepad++, TextMate, ou autre.
+
+
+Listez les classes en suivant le format suivant (exemple pour Super Mario Bros) :
+
+
+------------------------------------------------------------
+classe Mario extends Personnage
+=====================================
+
+  Attributs :
+    private int nbrVies : le nombre de vies restantes
+
+    private int score : score actuel de Mario
+
+  Méthodes :
+    public Mario(int nbrVies) : constructeur, prends en paramètre
+      le nombre initial de vies
+
+    public void sauter() : permet de sauter
+
+    publc void deplacer() :
+
+    public void perdreVie() : enlève une vie à Mario
+      si le nombre de vies tombe à zéro, la partie se
+      termine
+
+
+classe Bloc
+===========
+
+  ...
+
+classe Niveau
+=============
+
+  Attributs :
+    private int numero : indique le numéro de niveau
+    private Bloc[] blocs : tableau des blocs dans le niveau
+    ...
+
+  Méthodes :
+    ...
+
+classe Jeu
+==========
+
+   Contient la fonction main()
+
+   ...
+
+...
+
+------------------------------------------------------------
+
+
+Vous devrez remettre un seul fichier contenant tout votre design
+
+Votre design ne devrait pas contenir de code, mais devrait être aussi
+détaillé que possible.
+
+Réfléchissez aux algorithmes dont vous aurez besoin, demandez-vous
+comment chaque objet peut avoir accès aux méthodes et données dont il
+a besoin pour fonctionner, etc.
+
+
+Le but de l'exercice est de vous pratiquer à réfléchir à une
+décomposition en objets, l'énoncé de TP complet contiendra une
+structure à respecter pour vos classes (donc ça ne sert à rien de vous
+mettre à coder le jeu tout de suite).
+
+
+
+Une fois que tout le monde aura remis un fichier contenant son design,
+la deuxième étape, sera de lire et commenter le design remis par deux
+autres personnes tirées au hasard. Votre design sera donc lu et
+critiqué par d'autres gens dans la classe.
+
+
+Cette évaluation en deux parties compte au total pour 1.5% de votre
+note, est à faire individuellement et fait partie des exercices notés.
+
+Notez : puisque l'évaluation est en deux parties et que la première
+partie est nécessaire à la deuxième, aucun retard ne sera accepté.
+
+Bon travail !

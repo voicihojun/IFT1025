@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="rfk:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/rfk_jar</output-path>
+    <root id="archive" name="rfk.jar">
+      <element id="module-output" name="IFT1025" />
+    </root>
+  </artifact>
+</component>
