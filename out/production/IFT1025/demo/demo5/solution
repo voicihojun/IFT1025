@@ -1,0 +1,59 @@
+Solution de demo05.
+
+Que pouvez-vous dire de l'implémentation de LinkedList en Java ?
+(Liste simplement chaînée ? Doublement chaînée ?)
+
+- LinkedList en Java utilise sûrement doublement chaînée. ListeChainnée utilise simplement chaînée et
+  le résultat est le plus lent car pour ajouter à la fin de la liste, l'analyse théorique, c'est O(n).
+  Mais si on ajoute l'element au début en utilisant addFirst de ListeChainnée, la vitesse augmente énormément, car c'est O(1).
+  Normalement, le rang du résultat est comme dessous quand on ajoute à la fin.
+
+  ArrayList--------
+  2383580
+  LinkedList--------
+  1201968
+  ListeChainee--------
+  35847897
+
+
+
+3. Modifiez vos programmes pour utiliser plutôt : addFirst(...)
+
+a) De quoi les nouvelles courbes auront l'air si vous dessinez
+graphiquement le temps d'exécution pour N=1 à N=5000 ? Faites une
+hypothèse
+- En ajoutant au début, c'est O(1). Donc, la vitesse augmente.
+  Un des temps requis est comme dessous.
+
+  ArrayList--------
+  1872186
+  LinkedList--------
+  1132592
+  ListeChainee--------
+  1621558
+
+b) Affichez les courbes et vérifiez votre hypothèse
+
+
+
+4. Nommez trois cas d'utilisation dans lesquels on préfèrerait utiliser :
+
+   1. Une Pile (Stack) plutôt qu'une List (ArrayList, LinkedList ou autre)
+      - Pour undo, on peut utiliser Stack.
+   2. Une File (Queue) plutôt qu'une List (ArrayList, LinkedList ou autre)
+      - Lors de l'impression de l'imprimante, en attente de documents.
+   3. Une List plutôt qu'une Pile ou une File
+      - ???
+
+
+
+5. Implémentez une File d'attente (Queue) en utilisant deux Piles
+(servez-vous de l'implémentation `Stack` de la librairie de
+collections)
+Utilisez les Generics
+
+S'il y a N éléments dans votre File, combien d'opérations sont
+requises pour ajouter un nouvel élément ?
+- C'est O(n). Tout d'abord, pour ajouter ou bien retirer, on doit déplacer tous les elements à l'autre.
+
+

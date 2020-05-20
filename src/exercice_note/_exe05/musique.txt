@@ -1,0 +1,320 @@
+1970 140 0 Pink Floyd
+2000 140 0 Céline Dion
+1980 90 1 Metallica
+1980 90 1 Céline Dion
+1990 90 1 Céline Dion
+1970 120 1 Pink Floyd
+1990 140 1 Céline Dion
+1960 150 1 Pink Floyd
+1980 100 1 Metallica
+1990 110 1 Céline Dion
+1980 170 1 Metallica
+1990 130 1 Metallica
+1960 120 0 Pink Floyd
+2000 140 1 Metallica
+1990 80 1 Céline Dion
+1960 120 1 Pink Floyd
+1990 100 1 Céline Dion
+2000 120 1 Céline Dion
+1970 90 1 Pink Floyd
+2000 120 0 Metallica
+1990 110 1 Metallica
+1980 90 0 Metallica
+1990 160 1 Metallica
+2000 100 1 Céline Dion
+1990 140 1 Céline Dion
+1990 80 1 Céline Dion
+1990 120 0 Metallica
+2000 120 0 Metallica
+2000 90 1 Pink Floyd
+1990 140 1 Céline Dion
+1990 130 1 Céline Dion
+1980 130 1 Céline Dion
+1980 200 1 Metallica
+1990 140 0 Metallica
+1990 110 0 Metallica
+2000 150 1 Céline Dion
+1990 110 1 Céline Dion
+1990 170 1 Céline Dion
+2000 150 1 Céline Dion
+1990 80 1 Céline Dion
+1990 120 1 Céline Dion
+1990 130 1 Céline Dion
+1970 110 0 Pink Floyd
+1960 130 0 Pink Floyd
+1980 170 1 Metallica
+1970 150 1 Pink Floyd
+2000 130 0 Céline Dion
+1990 80 1 Pink Floyd
+2000 150 0 Céline Dion
+1970 130 0 Pink Floyd
+1980 120 0 Céline Dion
+1960 110 1 Pink Floyd
+2000 130 0 Céline Dion
+1980 140 1 Metallica
+1980 180 0 Metallica
+1980 80 1 Céline Dion
+2000 110 1 Céline Dion
+2000 90 0 Céline Dion
+1990 190 0 Metallica
+1990 90 1 Céline Dion
+1980 110 0 Metallica
+1990 130 0 Metallica
+1990 60 0 Céline Dion
+1960 90 1 Pink Floyd
+1980 90 0 Céline Dion
+1990 120 0 Céline Dion
+1990 100 1 Céline Dion
+1960 110 1 Pink Floyd
+2000 80 1 Céline Dion
+1990 100 1 Céline Dion
+1960 90 1 Pink Floyd
+1980 190 0 Metallica
+2000 80 1 Céline Dion
+1990 110 0 Céline Dion
+1960 140 1 Pink Floyd
+1970 110 1 Pink Floyd
+1980 180 0 Metallica
+1960 150 1 Pink Floyd
+2000 190 0 Metallica
+1980 100 1 Metallica
+2000 110 0 Metallica
+1990 150 1 Metallica
+1990 130 1 Metallica
+1980 230 1 Metallica
+1990 140 0 Metallica
+1980 190 1 Metallica
+2000 130 0 Céline Dion
+1990 90 1 Céline Dion
+1990 110 1 Céline Dion
+1990 120 0 Metallica
+2000 90 0 Céline Dion
+1990 110 0 Céline Dion
+1990 100 0 Céline Dion
+1990 150 0 Metallica
+2000 100 1 Céline Dion
+1990 190 0 Céline Dion
+1990 90 0 Céline Dion
+1970 130 1 Pink Floyd
+1990 90 0 Metallica
+2000 100 0 Céline Dion
+1980 60 1 Céline Dion
+1980 100 1 Metallica
+2000 90 1 Céline Dion
+1980 70 1 Metallica
+1970 80 1 Pink Floyd
+1990 90 1 Céline Dion
+1970 120 0 Pink Floyd
+1990 120 1 Metallica
+2000 140 1 Céline Dion
+2000 50 1 Céline Dion
+1980 120 1 Metallica
+1980 80 1 Metallica
+2000 70 0 Céline Dion
+1990 150 1 Céline Dion
+1990 90 0 Metallica
+2000 120 0 Metallica
+1990 130 1 Céline Dion
+1980 170 0 Metallica
+1990 120 1 Metallica
+1970 160 1 Pink Floyd
+2000 100 1 Céline Dion
+1980 140 0 Céline Dion
+2000 150 0 Céline Dion
+1990 120 0 Metallica
+1970 110 1 Pink Floyd
+1980 140 1 Céline Dion
+1980 110 1 Metallica
+1980 70 0 Céline Dion
+1990 80 1 Céline Dion
+1970 100 1 Pink Floyd
+1990 120 1 Metallica
+1970 140 1 Pink Floyd
+1990 90 1 Céline Dion
+1960 120 0 Pink Floyd
+2000 160 0 Céline Dion
+1980 100 0 Metallica
+1960 120 0 Pink Floyd
+1990 110 1 Céline Dion
+1980 160 1 Metallica
+1980 110 0 Metallica
+1980 100 0 Metallica
+1980 80 0 Metallica
+1990 90 1 Céline Dion
+1990 100 1 Céline Dion
+1960 50 1 Pink Floyd
+1990 60 0 Céline Dion
+1990 120 1 Céline Dion
+1990 110 1 Céline Dion
+1980 120 0 Metallica
+1980 190 0 Metallica
+2000 70 0 Céline Dion
+2000 110 1 Metallica
+2000 120 0 Céline Dion
+1990 90 0 Metallica
+2000 160 1 Céline Dion
+1990 120 1 Céline Dion
+1990 80 1 Metallica
+1990 120 0 Metallica
+1970 110 0 Pink Floyd
+1970 80 1 Pink Floyd
+1990 70 0 Metallica
+1960 80 1 Pink Floyd
+1960 160 1 Pink Floyd
+1990 100 1 Céline Dion
+1980 130 1 Metallica
+1990 150 0 Metallica
+1980 200 0 Metallica
+1990 120 1 Céline Dion
+1970 60 1 Pink Floyd
+1970 120 1 Pink Floyd
+2000 80 0 Pink Floyd
+1980 110 1 Metallica
+1970 80 0 Pink Floyd
+1990 130 1 Metallica
+1970 130 1 Pink Floyd
+1980 120 0 Metallica
+1970 100 1 Pink Floyd
+1980 200 0 Metallica
+2000 160 1 Céline Dion
+2000 70 1 Céline Dion
+1990 120 1 Metallica
+1990 120 1 Céline Dion
+1960 110 1 Pink Floyd
+1970 80 1 Pink Floyd
+1990 90 1 Céline Dion
+1970 120 1 Pink Floyd
+1980 90 1 Metallica
+2000 140 0 Metallica
+1980 130 0 Metallica
+1960 130 1 Pink Floyd
+1970 130 1 Pink Floyd
+2000 110 1 Pink Floyd
+1980 110 1 Metallica
+2000 180 1 Céline Dion
+1980 150 0 Metallica
+2000 100 1 Céline Dion
+1990 110 0 Metallica
+1980 80 1 Céline Dion
+1980 160 1 Metallica
+2000 100 1 Céline Dion
+1980 140 1 Metallica
+1970 110 1 Pink Floyd
+2000 120 1 Metallica
+1960 50 0 Pink Floyd
+2000 150 1 Metallica
+1960 120 1 Pink Floyd
+2000 100 0 Céline Dion
+1980 70 0 Céline Dion
+1980 200 1 Metallica
+2000 80 1 Céline Dion
+1990 110 1 Céline Dion
+2000 100 1 Céline Dion
+1980 150 1 Metallica
+1960 160 1 Pink Floyd
+1980 190 0 Metallica
+1990 110 0 Metallica
+1980 190 0 Metallica
+1990 130 0 Metallica
+1990 110 0 Metallica
+2000 80 1 Céline Dion
+2000 120 0 Metallica
+1980 110 1 Metallica
+2000 100 1 Céline Dion
+2000 150 1 Céline Dion
+1990 90 1 Céline Dion
+2000 80 1 Céline Dion
+1960 120 1 Pink Floyd
+1970 90 0 Pink Floyd
+2000 150 1 Céline Dion
+1980 150 1 Metallica
+1980 110 1 Metallica
+1990 120 1 Céline Dion
+1980 190 1 Metallica
+2000 100 1 Metallica
+1960 140 1 Pink Floyd
+1970 130 1 Pink Floyd
+1990 90 1 Céline Dion
+1960 140 1 Pink Floyd
+1980 170 0 Metallica
+1960 140 1 Pink Floyd
+2000 100 1 Metallica
+1980 140 1 Céline Dion
+1990 110 1 Céline Dion
+1990 80 1 Céline Dion
+2000 130 0 Céline Dion
+1990 110 1 Céline Dion
+1990 80 1 Céline Dion
+1980 130 1 Metallica
+1980 160 0 Metallica
+1970 160 1 Pink Floyd
+1980 80 1 Metallica
+1980 190 0 Metallica
+1990 120 1 Céline Dion
+1990 130 1 Céline Dion
+1980 150 1 Metallica
+1990 100 0 Pink Floyd
+1990 120 0 Metallica
+1960 140 1 Pink Floyd
+2000 70 1 Céline Dion
+1990 110 0 Céline Dion
+1980 120 0 Pink Floyd
+1990 110 1 Metallica
+1990 150 1 Céline Dion
+1960 100 1 Pink Floyd
+1980 150 0 Metallica
+1960 120 0 Pink Floyd
+1990 140 1 Céline Dion
+1990 80 1 Céline Dion
+1990 90 1 Metallica
+1980 200 1 Metallica
+1990 80 1 Céline Dion
+2000 100 0 Céline Dion
+1990 140 0 Metallica
+2000 110 1 Céline Dion
+2000 190 0 Metallica
+1990 90 1 Pink Floyd
+1960 160 1 Pink Floyd
+1990 140 1 Céline Dion
+1960 130 1 Pink Floyd
+2000 100 0 Metallica
+1970 130 1 Pink Floyd
+1960 130 1 Pink Floyd
+1990 130 1 Céline Dion
+1980 170 1 Metallica
+1980 160 0 Metallica
+2000 150 0 Céline Dion
+1960 140 1 Pink Floyd
+2000 110 0 Céline Dion
+1990 130 0 Metallica
+1990 160 1 Metallica
+1980 110 1 Metallica
+1990 80 0 Céline Dion
+1980 80 0 Céline Dion
+1990 110 1 Céline Dion
+1990 100 1 Céline Dion
+2000 70 1 Céline Dion
+1990 130 1 Céline Dion
+1980 190 1 Metallica
+2000 120 0 Céline Dion
+1960 110 1 Pink Floyd
+1990 130 0 Céline Dion
+2000 130 1 Céline Dion
+1970 120 1 Pink Floyd
+1990 150 1 Céline Dion
+1960 100 1 Pink Floyd
+1980 180 0 Metallica
+1970 120 0 Pink Floyd
+1980 190 1 Metallica
+1990 110 1 Pink Floyd
+2000 110 1 Metallica
+1970 160 1 Pink Floyd
+1990 140 0 Céline Dion
+1980 90 1 Metallica
+1960 110 1 Pink Floyd
+1990 130 1 Metallica
+2000 190 0 Metallica
+1970 110 0 Pink Floyd
+1960 110 0 Pink Floyd
+1980 130 1 Céline Dion
+1990 100 1 Céline Dion
