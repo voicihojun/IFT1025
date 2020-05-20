@@ -7,10 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5bf8d4bb-94e3-4e2c-9d63-1c8c6f09f815" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/projet/projet01/Point.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exercice_note/exe06/src/model/Point.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exercice_note/exe06_javaFX/src/exe06/View.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/IFT1025/META-INF/IFT1025.kotlin_module" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,16 +33,23 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/exercice_note/exe06" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/exercice_note/exe07" />
+      <recent name="$PROJECT_DIR$/src/exercice_note/exe06/enonce" />
+      <recent name="$PROJECT_DIR$/src/exercice_note/exe05" />
+      <recent name="$PROJECT_DIR$/src/projet/projet01/enonce" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="exercice_note" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/projet/projet01/enonce" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/exercice_note/exe06" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -58,13 +64,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.RobotFindsKitten">
-    <configuration name="Exercice1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="exercice_note.exe01.Exercice1" />
+  <component name="RunManager" selected="Application.DecisionTree">
+    <configuration name="DecisionTree" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="exercice_note._exe05.DecisionTree" />
       <module name="IFT1025" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="exercice_note.exe01.*" />
+          <option name="PATTERN" value="exercice_note._exe05.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -72,25 +78,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Exercice2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="exercice_note.exe02.Exercice2" />
+    <configuration name="Number2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="demo.demo5.Number2" />
       <module name="IFT1025" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="exercice_note.exe02.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Exercice3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="exercice_note.exe03.Exercice3" />
-      <module name="IFT1025" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="exercice_note.exe03.*" />
+          <option name="PATTERN" value="demo.demo5.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -111,12 +104,39 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="exercice_note.exe05.Test" />
+      <module name="IFT1025" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="exercice_note._exe05.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestDecisionTree" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="exercice_note._exe05.TestDecisionTree" />
+      <module name="IFT1025" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="exercice_note._exe05.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.DecisionTree" />
+        <item itemvalue="Application.TestDecisionTree" />
+        <item itemvalue="Application.Test" />
+        <item itemvalue="Application.Number2" />
         <item itemvalue="Application.RobotFindsKitten" />
-        <item itemvalue="Application.Exercice3" />
-        <item itemvalue="Application.Exercice2" />
-        <item itemvalue="Application.Exercice1" />
       </list>
     </recent_temporary>
   </component>

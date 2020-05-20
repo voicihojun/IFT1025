@@ -1,0 +1,227 @@
+Exercice noté #5
+Description
+-----------
+
+L'exercice noté de cette semaine consiste à programmer un arbre de
+décision général qui pourra faire des prédictions à partir d'un jeu de
+données quelconque.
+
+
+Un arbre de décision permet de prédire une valeur en fonction de
+caractéristiques, par exemple :
+
+
+            [ Catégorie ? ]
+
+            /             \
+        Humain           Oiseau
+          /                 \
+
+       [ Son ? ]            [ Son ? ]
+
+        /     \             /        \
+    Chante   Parle       Chante     Parle
+      /         \         /            \
+     /           \       /              \
+
+  (Ginette) ( Jimmy )  (Rouge Gorge)  (Perroquet)
+  (Renaud ) (Whooper)
+
+
+
+
+Un arbre permet de partir d'un ensemble d'attributs :
+
+    Catégorie: Humain
+    Son: Parle
+
+Et descendre dans l'arbre en suivant les branches qui correspondent
+aux caractéristiques jusqu'à atteindre une des feuilles de l'arbre,
+qui contient une prédiction :
+
+    => Jimmy Whooper
+
+
+Fonctionnement
+--------------
+
+Un Arbre de décision est créé à partir d'un jeu de données contenant
+des caractéristiques associées à des décisions :
+
+{Caractéristiques}   => Décision
+
+{"Humain", "Chante"} => "Ginette Renaud"
+{"Humain", "Parle"}  => "Jimmy Whooper"
+{"Oiseau", "Chante"} => "Rouge Gorge"
+{"Oiseau", "Parle"}  => "Perroquet"
+
+
+Chaque noeud de l'arbre permet de séparer un ensemble de données en
+sous-ensembles qui partagent une caractéristique commune.
+
+Par exemple, le premier Noeud de l'arbre (la racine) peut séparer le
+jeu de données en fonction de la première caractéristique :
+
+
+
+                 [ Catégorie ? ]
+
+                 /             \
+             Humain            Oiseau
+               /                 \
+
+    {"Humain", "Chante"}     {"Oiseau", "Chante"}
+    => "Ginette Renaud"        => "Rouge Gorge"
+
+    {"Humain", "Parle"}      {"Oiseau", "Parle"}
+    =>  "Jimmy Whooper"        =>  "Perroquet"
+
+
+Ce Noeud aura deux Noeuds enfants : un qui permettra de prendre une
+décision pour le sous-ensemble contenant des humains seulement, et
+l'autre qui décidera pour les oiseaux seulement.
+
+Pour les humains, on peut séparer l'ensemble de données en fonction du
+son qu'ils produisent :
+
+
+               [ Son ? ]
+
+             /           \
+         Chante         Parle
+           /               \
+          /                 \
+
+  {"Humain", "Chante"}   {"Humain", "Parle"}
+  => "Ginette Renaud"    =>  "Jimmy Whooper"
+
+
+On a alors utilisé toutes les caractéristiques disponibles pour
+séparer notre ensemble : on arrive à une feuille de l'arbre, qui
+donnera directement une prédiction.
+
+
+Pour garder l'implantation simple, on va considérer que le niveau du
+noeud dans l'arbre détermine la caractéristique choisie pour séparer
+l'ensemble de données en sous-ensembles : la racine sépare l'ensemble
+de départ selon la première caractéristique (ex.: Catégorie), les
+enfants de la racine séparent en fonction de la deuxième
+caractéristique (ex.: Son), etc.
+
+
+Précisions
+----------
+
+1. Notez qu'il est possible de se retrouver avec plus d'une prédiction
+possible pour des mêmes caractéristiques :
+
+    ["Humain", "Chante"] => "Ginette Renaud"
+    ["Humain", "Chante"] => "Didier Super"
+    ["Humain", "Parle"]  => "Jimmy Whooper"
+
+Dans ce cas, une feuille contient un ensemble de plusieurs éléments et
+on peut retourner la proportion de chaque élément dans l'ensemble :
+
+    ["Humain", "Chante"] => 50% Ginette Renaud, 50% Didier Super
+
+
+
+2. De la même façon, il est tout à fait possible de ne pas avoir
+d'informations sur certaines caractéristiques. Si on demande une
+prédiction pour :
+
+    ["Humain", "Crie"]
+
+Puisque notre arbre de décision n'a jamais vu d'exemple d'humain qui
+crie, on ne sait pas quoi répondre. On peut alors humblement retourner
+un "Je ne sais pas".
+
+
+3. Notez également que les Noeuds de l'arbre peuvent avoir un nombre
+quelconque d'enfants :
+
+
+["Humain",     "Chante"] => "Ginette Renaud"
+["Humain",     "Parle"]  => "Jimmy Whooper"
+["Oiseau",     "Chante"] => "Rouge Gorge"
+["Oiseau",     "Parle"]  => "Perroquet"
+["Personnage", "Chante"] => "Dr. Frank N. Furter"
+["Personnage", "Chante"] => "Dorothy Gale"
+["Personnage", "Crie"]   => "King Kong"
+
+
+Dans ce contexte, la racine de l'arbre séparerait le jeu de données
+original en trois ensembles :
+
+
+                 [ Catégorie ? ]
+
+            /           |          \
+        Humain     Personnage      Oiseau
+          /             |            \
+         ...           ...           ...
+
+
+
+4. Finalement, notez que si le critère choisi mène toujours à la même
+prédiction, par exemple une entrée de Catégorie: "Premier Ministre"
+
+
+["Humain",           "Chante"] => "Ginette Renaud"
+["Humain",           "Parle"]  => "Jimmy Whooper"
+["Oiseau",           "Chante"] => "Rouge Gorge"
+["Oiseau",           "Parle"]  => "Perroquet"
+["Premier Ministre", "Parle"]  => "Justin Trudeau"
+
+Il n'est pas nécessaire de tester le son que ça fait avant de
+décider qu'il s'agit de "Justin Trudeau". On peut tout de suite
+arrêter de descendre plus loin dans l'arbre.
+
+Ceci implique que si on demande plus tard :
+
+["Premier Ministre", "Chante"]
+
+La prédiction faite sera "Justin Trudeau".
+
+
+Conseil
+-------
+
+Vous êtes libres de programmer l'arbre comme vous le voulez, mais la
+façon la plus simple est de le faire récursivement.
+
+
+Dans les grandes lignes, pour un Noeud n et des Caractéristiques c :
+
+n.predict(c) :
+    Si n est une feuille :
+        retourner la prédiction faite par le noeud
+    Sinon :
+        Trouver le Noeud enfant m qui correspond à la catégorie de la
+            caractéristique utilisée par n
+        retourner m.predict(c)
+
+
+Évaluation
+----------
+
+Une base de code contenant des tests + une structure de classes sur
+laquelle vous baser vous sont fournies, vous devez remplir les
+différentes sections marquées TODO.
+
+Votre code final devrait permettre de prendre des décisions sur trois
+jeux de données :
+
+1. Jeu de données simple (celui utilisé en exemple plus haut)
+2. Jeu de données un peu plus complexe (4 caractéristiques, sur la météo)
+3. Jeu de données avancé tiré d'exemples réels (320 exemples de
+   caractéristiques de chansons écrites par différents artistes)
+
+Vous pouvez ajouter des classes, des méthodes et des attributs au
+besoin.
+
+
+Remettez tous vos fichiers .java
+
+Ce travail compte pour 2% de votre note finale et est à faire
+individuellement

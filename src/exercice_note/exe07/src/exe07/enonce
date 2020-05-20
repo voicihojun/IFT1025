@@ -1,0 +1,44 @@
+Exercice noté #7
+Le programme JavaFXPi disponible sur StudiUM permet de trouver la
+première occurrence d'une séquence de chiffres dans les ~100,000,000
+premières décimales de PI, disponibles dans le fichier pi.txt
+(également sur StudiUM).
+
+On peut par exemple chercher "42" et s'apercevoir que la première
+occurrence est en position 91.
+
+Rechercher une séquence de caractères dans un gros fichier peut être
+long dans certains cas, ce qui bloque l'interface graphique (et qui
+empêche la jolie animation du symbole Pi de continuer pendant la
+recherche).
+
+Si vous essayez de rechercher la séquence "4222222222222222222222222",
+tout le fichier doit être parcouru avant de constater que la séquence
+ne fait pas partie des ~100,000,000 première décimales de Pi, ce qui
+prend un certain temps.
+
+
+
+Une façon simple de ne pas bloquer l'interface graphique est
+d'exécuter la recherche de caractères dans un thread séparé de celui
+de l'interface graphique. C'est ce que vous devez faire.
+
+Notez qu'il est interdit de modifier l'interface graphique depuis un
+thread autre que le thread d'application JavaFX.
+
+Pour mettre à jour une composante graphique (par exemple, pour
+modifier le texte affiché à l'écran), vous pouvez appeler la fonction
+Platform.runLater( ... ) qui exécutera éventuellement le bout de code
+fourni dans l'instance du Runnable en paramètre sur le thread
+d'application JavaFX.
+
+Référez-vous aux notes de cours pour un exemple de thread dans un
+programme JavaFX.
+
+
+- Ce travail est à faire individuellement et compte pour 0,5% de la
+  note finale
+- Notez qu'il y a très peu de code à modifier, vous n'avez
+  en théorie besoin que de modifier légèrement la fonction :
+
+    public void search(String digits)

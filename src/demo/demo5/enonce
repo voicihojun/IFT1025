@@ -1,0 +1,94 @@
+Démonstration 05
+0. Programmer une liste chaînée simple nommée ListeChainee
+
+Utilisez les Generics pour la rendre paramétrable
+
+Définissez une classe Noeud<E> {} dont les attributs sont publics
+
+Définissez les méthodes suivantes dans la classe ListeChainee :
+
+- void addFirst(E element)
+- void addLast(E element)
+- E get(int index)
+- void set(int index, E element)
+- int size()
+
+
+1. Écrivez un programme qui permet de générer une liste de N nombres
+au hasard. Chaque nouveau nombre est ajouté à la fin de la liste
+
+
+Utilisez pour générer vos nombres :
+
+Random random = new Random();
+random.nextInt();
+
+
+a) Implémentez ce programme en utilisant un ArrayList
+
+b) Implémentez ce programme en utilisant votre ListeChainee
+
+c) Implémentez ce programme en utilisant une LinkedList de Java
+
+
+2. Benchmarkez ces trois programmes. Calculez le temps d'exécution lors
+de l'ajout de chaque élément pour N=1 à N=5000 et dessinez le résultat
+du temps d'exécution selon N graphiquement.
+
+
+Utilisez :
+
+long time = System.nanoTime();
+
+// Ajout d'un élément
+
+long deltaTime = System.nanoTime() - time;
+
+Pour trouver le temps deltaTime requis pour ajouter un élément à la
+liste
+
+
+Vous pouvez utiliser le programme gnuplot pour afficher les résultats :
+
+$ java Version1 > v1
+$ java Version2 > v2
+$ gnuplot
+plot 'v1', '' smooth bezier title '', 'v2', '' smooth bezier title ''
+
+
+
+Que pouvez-vous dire de l'implémentation de LinkedList en Java ?
+(Liste simplement chaînée ? Doublement chaînée ?)
+
+
+
+3. Modifiez vos programmes pour utiliser plutôt : addFirst(...)
+
+
+a) De quoi les nouvelles courbes auront l'air si vous dessinez
+graphiquement le temps d'exécution pour N=1 à N=5000 ? Faites une
+hypothèse
+
+b) Affichez les courbes et vérifiez votre hypothèse
+
+
+
+4. Nommez trois cas d'utilisation dans lesquels on préfèrerait utiliser :
+
+   1. Une Pile (Stack) plutôt qu'une List (ArrayList, LinkedList ou autre)
+   2. Une File (Queue) plutôt qu'une List (ArrayList, LinkedList ou autre)
+   3. Une List plutôt qu'une Pile ou une File
+
+
+
+5. Implémentez une File d'attente (Queue) en utilisant deux Piles
+(servez-vous de l'implémentation `Stack` de la librairie de
+collections)
+Utilisez les Generics
+- j'ai implementé cela dans la classe de Number5.
+
+S'il y a N éléments dans votre File, combien d'opérations sont
+requises pour ajouter un nouvel élément ?
+
+6. Répondre aux questions de la section 1 (Questions diverses) de l'intra d'Hiver 2015
+
