@@ -7,9 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5bf8d4bb-94e3-4e2c-9d63-1c8c6f09f815" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/exercice_note/exe06/src/model/Point.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/exercice_note/exe06_javaFX/src/exe06/View.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exercice_note/exe07/out/production/exe07/exe07/JavaFXPi$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/exercice_note/exe07/out/production/exe07/exe07/JavaFXPi$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exercice_note/exe07/out/production/exe07/exe07/JavaFXPi.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/exercice_note/exe07/out/production/exe07/exe07/JavaFXPi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exercice_note/exe07/pi.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exercice_note/exe07/src/exe07/JavaFXPi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exercice_note/exe07/src/exe07/JavaFXPi.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
