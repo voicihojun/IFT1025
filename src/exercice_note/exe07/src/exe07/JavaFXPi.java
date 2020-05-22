@@ -7,6 +7,7 @@ import java.lang.annotation.Native;
 
 import javafx.animation.AnimationTimer;
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -21,7 +22,7 @@ import javafx.stage.Stage;
 public class JavaFXPi extends Application {
 
     private Text result;
-    private Button search;
+    private Button btn;
 
     public static void main(String[] args) {
         launch(args);
@@ -61,20 +62,47 @@ public class JavaFXPi extends Application {
 
         TextField pattern = new TextField();
 
+        // ce code est activé quand je clique "enter"
+        // j'ai changé ce code en utilisant Platform.runlater
+//        pattern.setOnAction((event) -> {
+//            search(pattern.getText());
+//        });
+
         pattern.setOnAction((event) -> {
-            search(pattern.getText());
+            Thread enter = new Thread(() -> {
+                Platform.runLater(() -> {
+                    search(pattern.getText());
+                    System.out.println("111");
+                });
+            });
+            enter.start();
         });
+
+
+
 
         Label patternLabel = new Label("Entrez une séquence de chiffres :");
         patternLabel.setLabelFor(pattern);
 
-        search = new Button("Rechercher");
+        btn = new Button("Rechercher");
 
-        search.setOnAction((event) -> {
-            search(pattern.getText());
+        // ce code est activé quand je clique le bouton.
+        // j'ai changé ce code en utilisant Platform.runlater
+//        btn.setOnAction((event) -> {
+//            search(pattern.getText());
+//        });
+        btn.setOnAction((event) -> {
+            Thread button = new Thread(() -> {
+                Platform.runLater(() -> {
+                    search(pattern.getText());
+                    System.out.println("222");
+                });
+            });
+            button.start();
         });
 
-        root.getChildren().addAll(logo, result, patternLabel, pattern, search);
+
+        root.getChildren().addAll(logo, result, patternLabel, pattern, btn);
         root.setPadding(new Insets(10));
         root.setSpacing(10);
         root.setAlignment(Pos.CENTER);
@@ -85,47 +113,51 @@ public class JavaFXPi extends Application {
     }
 
     public void search(String digits) {
-        search.setDisable(true);
+
+        btn.setDisable(true);
         result.setText("Recherche en cours...");
 
-        boolean found = false;
+        // j'ai ajouté un thread separé ici pour ne pas influencer l'interface graphique.
+        Thread t = new Thread(()-> {
+            boolean found = false;
+            try {
+                FileReader reader = new FileReader(new File("pi.txt"));
 
-        try {
-            FileReader reader = new FileReader(new File("pi.txt"));
+                int position = 0;
 
-            int position = 0;
+                int matching = 0;
+                int val;
 
-            int matching = 0;
-            int val;
+                while ((val = reader.read()) != -1) {
+                    char c = (char) val;
 
-            while ((val = reader.read()) != -1) {
-                char c = (char) val;
+                    if (matching == digits.length()) {
+                        String text = "Séquence trouvée en position : " + (position - matching);
+                        found = true;
+                        result.setText(text);
+                        break;
+                    }
 
-                if (matching == digits.length()) {
-                    String text = "Séquence trouvée en position : " + (position - matching);
-                    found = true;
-                    result.setText(text);
-                    break;
+                    if (c == digits.charAt(matching)) {
+                        matching++;
+                    } else {
+                        matching = 0;
+                    }
+
+                    position++;
                 }
 
-                if (c == digits.charAt(matching)) {
-                    matching++;
-                } else {
-                    matching = 0;
+                if (!found) {
+                    result.setText("Chiffres introuvables");
                 }
 
-                position++;
+                btn.setDisable(false);
+
+                reader.close();
+            } catch (IOException ex) {
+                System.out.println("Erreur d'entrée/sortie, vérifiez que le fichier");
             }
-
-            if (!found) {
-                result.setText("Chiffres introuvables");
-            }
-
-            search.setDisable(false);
-
-            reader.close();
-        } catch (IOException ex) {
-            System.out.println("Erreur d'entrée/sortie, vérifiez que le fichier");
-        }
+        });
+        t.start();
     }
 }
